@@ -1,0 +1,40 @@
+.header {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid lightgray;
+    padding: 5px;
+    background-color: #edf0f7;
+
+    .header-img {
+      margin-left: 8rem;
+    }
+
+    .header-links {
+      width: 25%;
+      height: 100%;
+
+       .profile-icon {
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 5rem;
+       }
+
+      .opt {
+        display: flex;
+        justify-content: space-evenly;
+
+        .option {
+          padding: 10px;
+          cursor: pointer;
+          color: black;
+          font-weight: bolder;
+          &:hover {
+            border-bottom: 1px solid #1e43ac;
+          }
+        }
+      }
+    }
+}

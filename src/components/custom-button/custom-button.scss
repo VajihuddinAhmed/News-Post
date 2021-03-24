@@ -1,0 +1,19 @@
+.custom-button {
+    width: 125px;
+    height: 40px;
+    letter-spacing: 0.5px;
+    background-color: #1e43ac;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  
+    &:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+}
+  
