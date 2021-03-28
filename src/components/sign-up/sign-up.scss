@@ -1,0 +1,23 @@
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    height: 600px;
+    box-shadow: 20px 32px 64px rgba(0,0,0,0.25);
+    background-color: #fff;
+
+    .title {
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .button {
+        display: grid;
+        justify-content: center;
+        margin: 1.2rem 0;
+    }
+}
