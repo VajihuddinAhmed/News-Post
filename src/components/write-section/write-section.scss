@@ -1,0 +1,30 @@
+.write-container {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 0.5px solid lightgray;
+    padding-bottom: 3.5rem;
+    background-color: white;
+    margin: 0;
+
+    .section-preview {
+        .title {
+            font-size: 70px;
+            line-height: 74px;
+            letter-spacing: -0.05em;
+            font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-weight: 400;
+        }
+        .para {
+            font-size: 18px;
+            line-height: 24px;
+            font-family: 'Lato', sans-serif;
+            font-weight: lighter;
+            padding-bottom: 3rem;
+        }
+    }
+
+    .section-image {
+        margin-top: 3rem;
+        box-shadow: 15px 10px 25px 0px  #ffffff;
+    }
+}

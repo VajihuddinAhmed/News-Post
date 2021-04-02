@@ -1,0 +1,41 @@
+.details-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 10rem 0;
+
+    .details-page {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            font-size: 48px;
+            line-height: 60px;
+            margin-top: 0.55em;
+            margin-bottom: -0.27em;
+            font-weight: 400;
+            font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
+            letter-spacing: -0.011em;
+        }
+
+        .source {
+            margin: 2rem 0;
+        }
+
+        .image {
+            height: 500px;
+        }
+
+        .para {
+            font-size: 21px;
+            margin: 4rem 0;
+            line-height: 32px;
+            letter-spacing: -0.003em;
+            margin-bottom: -0.46em;
+            font-weight: 400;
+            font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+    }
+}
