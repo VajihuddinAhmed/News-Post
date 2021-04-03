@@ -1,0 +1,51 @@
+.subscribe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #7BFFF0;
+    border-bottom: 0.5px solid lightgray;
+    padding: 3rem 0;
+
+    .parag {
+        margin: 0;
+    }
+
+    .sign {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .email {
+            background-color: white;
+            color: grey;
+            font-size: 14px;
+            padding: 10px 10px 10px 5px;
+            width: 55%;
+            border-radius: 0;
+            border: 0.1px solid lightslategrey;
+            margin: 20px 10px;
+        }
+
+        .btn {
+            width: 125px;
+            height: 40px;
+            letter-spacing: 0.5px;
+            background-color: #1e43ac;
+            color: white;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+          
+            &:hover {
+              background-color: white;
+              color: black;
+              border: 1px solid black;
+            }
+        }
+    }
+
+}
