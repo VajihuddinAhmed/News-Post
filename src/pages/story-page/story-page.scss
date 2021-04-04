@@ -1,0 +1,35 @@
+.story-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .story-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+
+        .section {
+            margin: 3rem 0;
+
+            .title {
+                font-weight: bolder;
+                line-height: 60px;
+                font-size: 42px;
+            }
+
+            .para {
+                line-height: 32px;
+                margin-top: 42px;
+                font-size: 21px;
+                font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+                font-style: italic;
+                word-break: break-word;
+                font-weight: 400;
+                padding-top: 1rem;
+
+            }
+        }
+    }
+}
