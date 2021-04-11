@@ -17,7 +17,7 @@ const EditProfile = ({ user }) => {
         ownerId: ''
     })
 
-    const url = "https://eu-api.backendless.com/FD203853-9C74-AAF6-FF8E-121ACE300400/4D9C57D7-5389-40E5-AB49-744270229B82/data/NewsPostAPI";
+    const url = "https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/data/NewsPostAPI";
 
     const fetchData = async () => {
         newPost.Image = localStorage.getItem('photo')
@@ -27,7 +27,7 @@ const EditProfile = ({ user }) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'REST-API-Key': '4D9C57D7-5389-40E5-AB49-744270229B82'
+                'REST-API-Key': 'B69C0E45-5D57-4B34-B301-B4DE62FDB203'
               },
             body: JSON.stringify(newPost),
         });
@@ -67,9 +67,9 @@ const EditProfile = ({ user }) => {
     const uploadImage = () => {
         const data = new FormData() 
         data.append('test', selectedFile)
-        let imgUrl = `https://eu-api.backendless.com/FD203853-9C74-AAF6-FF8E-121ACE300400/4D9C57D7-5389-40E5-AB49-744270229B82/files/${selectedFile.name}?overwrite=true`;
+        let imgUrl = `https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/files/${selectedFile.name}?overwrite=true`;
         console.log(selectedFile.name)
-        localStorage.setItem('photo', `https://eu-api.backendless.com/FD203853-9C74-AAF6-FF8E-121ACE300400/4D9C57D7-5389-40E5-AB49-744270229B82/files/${selectedFile.name}`);
+        localStorage.setItem('photo', `https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/files/${selectedFile.name}`);
         fetch(imgUrl, {
             method: 'POST',
             mode: 'cors',

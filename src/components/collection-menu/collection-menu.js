@@ -5,14 +5,14 @@ const CollectionMenu = () => {
   const [hasErrors, setErrors] = useState(false);
   console.log(!hasErrors)
   const [collections, setCollections] = useState([]);
-  const url = "https://eu-api.backendless.com/FD203853-9C74-AAF6-FF8E-121ACE300400/4D9C57D7-5389-40E5-AB49-744270229B82/data/sectionsAPI";
+  const url = "https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/data/sectionsAPI";
 
     const fetchData = async () => {
         const res = await fetch(url, {
             headers: {
-                'Content-Type': 'application/json',
-                'REST-API-Key': '4D9C57D7-5389-40E5-AB49-744270229B82'
-              }
+              'Content-Type': 'application/json',
+              'REST-API-Key': 'B69C0E45-5D57-4B34-B301-B4DE62FDB203'
+            }
         });
         res
           .json()

@@ -2,39 +2,36 @@ import React, { useState } from 'react';
 import FormInput from '../form-input/form-input';
 import CustomButton from '../custom-button/custom-button';
 import './sign-up.scss';
+import { signup } from '../../redux/user/user.actions';
+import { useDispatch } from "react-redux";
+import { withRouter } from 'react-router-dom';
 
-const SignUp = () => {
+const SignUp = (props) => {
     
     const [userCredentials, setUserCredentials] = useState({
         name: '',
         email: '',
         password: ''
     })
-
-    const url = "https://eu-api.backendless.com/FD203853-9C74-AAF6-FF8E-121ACE300400/4D9C57D7-5389-40E5-AB49-744270229B82/users/register";
-
-    const fetchData = async () => {
-        const res = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'REST-API-Key': '4D9C57D7-5389-40E5-AB49-744270229B82'
-              },
-            body: JSON.stringify(userCredentials),
-        });
-        res
-          .json()
-          .then(userCredentials => {
-            console.log('Success:', userCredentials);
-          })
-          .catch(err => console.log(err));
-      }
-
-    const { name, email, password } = userCredentials
+    const { name, email, password } = userCredentials;
+    const dispatch = useDispatch();
+    const [errorMsg, setErrorMsg] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        fetchData();
+        dispatch(
+            signup(email, name, password))
+            .then(() => {
+            let visited = localStorage.getItem('user-clicked');
+            if(visited) {
+            props.history.push(`/${visited}`);
+            } else {
+            props.history.push('/');
+            }
+            })
+            .catch(() => {
+            setErrorMsg(!errorMsg)
+        });
 
         setUserCredentials({ name: '', email: '', password: '' })
 
@@ -83,4 +80,4 @@ const SignUp = () => {
     )
 };
 
-export default SignUp;
+export default withRouter(SignUp);

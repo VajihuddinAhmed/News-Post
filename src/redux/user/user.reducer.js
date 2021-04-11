@@ -1,4 +1,4 @@
-import { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, SET_CURRENT_USER } from './user.types'
+import { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, SET_CURRENT_USER, SIGN_UP } from './user.types'
 
 const user = JSON.parse(localStorage.getItem("user"));
 
@@ -30,6 +30,12 @@ const userReducer = (state = INITIAL_STATE, action) => {
                     isLoggedIn: false,
                     user: null,
                 };
+            case SIGN_UP:
+                return {
+                    ...state,
+                    isLoggedIn: true,
+                    user: payload.user
+                }
         default: 
             return state
     }
