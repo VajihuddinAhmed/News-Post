@@ -1,0 +1,55 @@
+.category-page {
+    width: 70%;
+    margin-left: 3rem;
+
+    .section {
+        box-shadow: 20px 32px 64px rgba(0,0,0,0.25);
+        padding: 2rem;
+        margin: 1rem;
+        background-color: aliceblue;
+        font-weight: 400;
+
+        &:hover {
+            background-color: #fed816;
+            font-weight: bolder;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+ 
+        .source {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: bolder;
+            width: 90%;
+            color: blue;
+        }
+
+        .image {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box {
+            width: 90%;
+          }
+          
+          .box p {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+
+        .timestamp {
+            font-weight: bolder;
+            margin: 0;
+        }
+    }
+}
