@@ -1,36 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import './user-posts.scss';
 import { connect } from 'react-redux';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
-import { createStructuredSelector } from 'reselect';
+import { fetchPosts } from '../../redux/userPosts/userPosts.action';
 import { Link } from 'react-router-dom';
 
-const UserPosts = ({ user }) => {
-    const [hasErrors, setErrors] = useState(false);
-    console.log(hasErrors)
-    const [collections, setCollections] = useState([]);
-    const url = "https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/data/NewsPostAPI?pageSize=100";
-
-    const fetchData = async () => {
-        const res = await fetch(url, {
-            headers: {
-                'Content-Type': 'application/json',
-                'REST-API-Key': 'B69C0E45-5D57-4B34-B301-B4DE62FDB203'
-              }
-        });
-        res
-          .json()
-          .then(res => {
-              const filteredUserPosts = res.filter((item) => {
-                  return item.ownerId === user.data.ownerId
-              })
-              setCollections(filteredUserPosts)
-          })
-          .catch(err => setErrors(err));
-    };
+const UserPosts = ({ user, allPosts, fetchPosts }) => {
 
     useEffect(() => {
-        fetchData();
+        fetchPosts();
         // eslint-disable-next-line
     }, []);
 
@@ -38,11 +16,13 @@ const UserPosts = ({ user }) => {
         localStorage.setItem('myItems', JSON.stringify(item))
         return user ? <Link to={{pathname: "/details", collections: item }} /> : window.open('/signin',"_self")
     }
-
-    return (
+    
+    return allPosts.error ? (
+        <h2>{allPosts.error}</h2>
+      ) : (
         <div className="user-posts">
         {
-            collections.map((item, i) => (
+            allPosts.userposts.map((item, i) => (
                 <Link key={i + 628} to={{pathname: "/details", collections: item }}>
                     <div key={i + 10} className="section" onClick={() => onPostClick(item)}>
                             <p className="source">{item.Source}</p>
@@ -72,8 +52,13 @@ const UserPosts = ({ user }) => {
         )
 }
 
-const mapStateToProps = createStructuredSelector({
-    user: selectCurrentUser
+const mapStateToProps = state => ({
+    allPosts: state.userposts,
+    user: selectCurrentUser(state)
 })
 
-export default connect(mapStateToProps)(UserPosts);
+const mapDispatchToProps = (dispatch) => ({
+    fetchPosts: () => dispatch(fetchPosts())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserPosts);
