@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const API_URL = "https://eu-api.backendless.com/FD203853-9C74-AAF6-FF8E-121ACE300400/4D9C57D7-5389-40E5-AB49-744270229B82/users/";
+const API_URL = "https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/users/";
 const headers =  {
     'Content-Type': 'application/json',
-    'REST-API-Key': '4D9C57D7-5389-40E5-AB49-744270229B82'
+    'REST-API-Key': 'B69C0E45-5D57-4B34-B301-B4DE62FDB203'
 }
 
 export const LoggedIn = (login, password) => {
@@ -23,5 +23,21 @@ export const LoggedIn = (login, password) => {
 
       return response;
     });
+};
+
+export const SignUp = (email, name,  password) => {
+  return axios.post(API_URL + "register", {
+    email,
+    name,
+    password,
+  }, 
+  {
+    headers: headers
+  }
+  )
+  .then((response) => {
+    console.log(response)
+    return response
+  })
 };
 

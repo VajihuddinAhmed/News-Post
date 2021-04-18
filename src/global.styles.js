@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Lato', sans-serif;
-        background-color: #edf0f7;
+        background-color: #ffffff;
 
         @media screen and (max-width: 800px) {
             padding: 10px;
