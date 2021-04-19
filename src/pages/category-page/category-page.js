@@ -8,6 +8,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 const CategoryPage = ({ user, categories, fetchCategory }) => {
       
         useEffect(() => {
+            window.scrollTo(0, 0);
             fetchCategory();
             // eslint-disable-next-line
         }, []);
