@@ -14,7 +14,6 @@ const SignIn = (props) => {
 
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState(false);
-
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(
@@ -22,7 +21,7 @@ const SignIn = (props) => {
             .then(() => {
             let visited = localStorage.getItem('user-clicked');
             if(visited) {
-            props.history.push(`/${visited}`);
+            props.history.push(`/business`);
             } else {
             props.history.push('/');
             }

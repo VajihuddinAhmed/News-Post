@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #edf0f7;
     padding-bottom: 1rem;
+    border-bottom: 0.5px solid lightgray;
+    background-color: #F8F8F8;
 
     .title {
         display: grid;
@@ -22,6 +23,7 @@
             height: 10rem;
             display: flex;
             justify-content: center;
+            background-color: #7BFFF0;
             align-items: center;
             box-shadow: 1px 1px 5px;
             font-size: 1.3rem;
@@ -30,9 +32,9 @@
             &:hover {
                 background-color: #1e43ac;
                 cursor: pointer;
+                transform: scale(1.4);
+                transition: transform 0.9s ease-in-out;
                 color: white;
-                transform: scale(1.3);
-                transition: transform 0.9s ease-out;
             }
         }
     }

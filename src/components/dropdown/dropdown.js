@@ -7,6 +7,7 @@ import { toggleDropdownHidden } from '../../redux/dropdown/dropdown.actions';
 import { connect } from 'react-redux';
 
 const Dropdown = ({ toggleDropdownHidden }) => {
+  window.scrollTo(0, 0);
   const dispatch = useDispatch()
   const logOut = () => {
     dispatch(Logout());
@@ -15,10 +16,12 @@ const Dropdown = ({ toggleDropdownHidden }) => {
     return (
         <div className="dropdown">
             <div className="items">
+                <Link to="/editprofile" onClick={toggleDropdownHidden} className="item">Edit Profile</Link>
                 <Link to="/writenews" onClick={toggleDropdownHidden} className="item">Write posts</Link>
-                <Link to="#" className="item">Your posts</Link>
+                <Link to="/posts" onClick={toggleDropdownHidden} className="item">My posts</Link>
                 <Link to="/" onClick={() => {
                     logOut()
+                    window.localStorage.clear()
                     dispatch(toggleDropdownHidden)
                 }} className="item">Log out</Link>
             </div>

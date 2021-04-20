@@ -6,8 +6,10 @@ import './profile-icon.scss';
 
 const ProfileIcon = ({ toggleDropdownHidden }) => (
     <div className="profile" onClick={toggleDropdownHidden}>
-        <img style={{width: '40px', height: '40px', borderRadius: '3rem'}} src={profile} alt="profile"/>
-        <span className="arrow">&#x25BE;</span>
+        <div className="arrow">
+            <img style={{width: '40px', height: '40px', borderRadius: '3rem'}} src={profile} alt="profile"/>
+            <span className="down-arrow">&#x25BE;</span>
+        </div>
     </div>
 );
 

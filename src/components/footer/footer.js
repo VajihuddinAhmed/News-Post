@@ -27,14 +27,14 @@ const Footer = () => (
                 </div>
                 <div className="option">
                     <h4>CONTACT US</h4>
-                    <Link className="links" to="#">Location</Link>
-                    <Link className="links" to="#">Phone Number</Link>
+                    <Link className="links" to="#">Paris</Link>
+                    <Link className="links" to="#">+33 669 289 661</Link>
                     <Link className="links" to="#">info@newspost.com</Link>
                 </div>
             </div>
         </div>
         <div className="copyright">
-            <h5 className="copyright-title"> © COPYRIGHT NEWSPOST</h5>
+            <h5 className="copyright-title"> © COPYRIGHT NEWSPOST - 2021</h5>
         </div>
     </div>
 )

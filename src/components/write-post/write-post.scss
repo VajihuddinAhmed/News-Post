@@ -1,14 +1,14 @@
-.write-container {
+.writepost-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
 
     .write-news {
         width: 60%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 3rem;
 
         .heading {
             text-align: center;
@@ -16,6 +16,7 @@
 
         .form {
             display: flex;
+            width: 100%;
             flex-direction: column;
 
             .select {
@@ -24,7 +25,6 @@
                 color: grey;
                 font-size: 18px;
                 padding: 10px 10px 10px 5px;
-                display: block;
                 width: 95%;
                 border: 0.1px solid black;
                 border-radius: 0;
@@ -61,6 +61,10 @@
                 border: 0.1px solid black;
                 border-radius: 0;
                 margin: 20px 0;
+            }
+
+            .text-area {
+                border: 1px solid black;
             }
 
             .file::-webkit-file-upload-button {

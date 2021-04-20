@@ -5,7 +5,6 @@ import { LoggedIn, SignUp } from '../../services/auth.service';
 export const Login = (login, password) => (dispatch) => {
     return LoggedIn(login, password).then(
       (data) => {
-        console.log(data)
         dispatch({
           type: LOGIN_SUCCESS,
           payload: { user: data },
@@ -27,7 +26,6 @@ export const Logout = () => (dispatch) => {
 export const signup = (email, name, password) => (dispatch) => {
   return SignUp(email, name, password).then(
     (data) => {
-      console.log(data)
       dispatch({
         type: SIGN_UP,
         payload: { user: data}

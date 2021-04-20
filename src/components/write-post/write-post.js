@@ -5,6 +5,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
 
 const WritePost = ({ user }) => {
+    window.scrollTo(0, 0);
 
     const [category, setCategory] = useState('')
     const [selectedFile, setSelectedFile] = useState('');
@@ -51,7 +52,7 @@ const WritePost = ({ user }) => {
         setNewPost({ Title: '', Source: '', Details: '' })
         setSelectedFile('')
         e.target.reset()
-
+        window.scrollTo(0, 0);
 
     }
 
@@ -79,7 +80,6 @@ const WritePost = ({ user }) => {
         const data = new FormData() 
         data.append('test', selectedFile)
         let imgUrl = `https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/files/${category}/${selectedFile.name}?overwrite=true`;
-        console.log(selectedFile.name)
         localStorage.setItem('photo', `https://eu-api.backendless.com/2F91D088-EB50-B7B7-FFFC-8439A97CF700/B69C0E45-5D57-4B34-B301-B4DE62FDB203/files/${category}/${selectedFile.name}`);
         fetch(imgUrl, {
             method: 'POST',
@@ -90,7 +90,6 @@ const WritePost = ({ user }) => {
             body: data,
         })
           .then(res => {
-            console.log(res);
             setSelectedFile(res.url);
           })
           .catch(err => console.log(err));
@@ -99,7 +98,7 @@ const WritePost = ({ user }) => {
 	return (
             <div className="writepost-container">
                 <div className="write-news">
-                    <h1 className="heading">Write your post</h1>
+                    <h1 className="heading">Write post</h1>
                     <form className="form" onSubmit={handleSubmit}>
                         <div>
                             <h3>Category</h3>
@@ -123,7 +122,7 @@ const WritePost = ({ user }) => {
                         </div>
                         <div>
                             <h3>Details</h3>
-                            <textarea name="Details" value={Details} onChange={handleChange} rows="35" cols="100"/>
+                            <textarea name="Details" value={Details} className="text-area" onChange={handleChange} rows="35" cols="100"/>
                         </div>
                         <div>
                             <h3>Image</h3>

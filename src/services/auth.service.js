@@ -40,4 +40,3 @@ export const SignUp = (email, name,  password) => {
     return response
   })
 };
-

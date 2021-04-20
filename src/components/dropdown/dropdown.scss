@@ -1,45 +1,45 @@
 .dropdown {
-    position: absolute;
-    width: 200px;
-    height: 200px;
+  position: absolute;
+  width: 205px;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-top: 0.5px solid lightgray;
+  background-color: white;
+  cursor: pointer;
+  top: 59px;
+  right: 40px;
+  z-index: 5;
+
+  .items {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    background-color: white;
-    cursor: pointer;
-    top: 70px;
-    right: 20px;
-    z-index: 5;
-  
-    .items {
-      display: flex;
-      flex-direction: column;
-      width: 195px;
-      position: relative;
-      left: 1.1px;
+    width: 200px;
+    position: relative;
+    left: 1.1px;
 
-        .item {
-            text-decoration: none;
-            color: black;
-            border-bottom: 0.5px solid lightgray;
-            height: 66px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bolder;
-            font-size: 1.1rem;
+      .item {
+          text-decoration: none;
+          color: black;
+          border-bottom: 0.5px solid lightgray;
+          height: 66px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bolder;
+          font-size: 1.1rem;
 
-            &:hover {
-                background-color: rgb(57, 176, 250);
-                color: white;
-            }
-        }
-      
-    }
+          &:hover {
+              background-color: rgb(57, 176, 250);
+              color: white;
+          }
+      }
+    
+  }
 
-    @media screen and (max-width: 800px) {
-      height: 300px;
-      width: 200px;
-    }
+  @media screen and (max-width: 800px) {
+    height: 300px;
+    width: 200px;
+  }
 }
-  
