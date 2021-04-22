@@ -20,10 +20,19 @@ const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost }) =>
     
     const deletedPost = () => {
         fetchDelete();
-        return history.push('/posts')
+        return history.push({pathname: '/posts', deleted: true})
     }
 
     const goToEditPage = () => {
+        localStorage.setItem('tt', collections.Title)
+        localStorage.setItem('tt1', collections.Source)
+        localStorage.setItem('tt2', collections.Details)
+        localStorage.setItem('tt3', collections.Category)
+        localStorage.setItem('tt4', collections.Image)
+        localStorage.setItem('tt5', collections.ownerId)
+        localStorage.setItem('tt6', collections.objectId)
+        
+    
         return history.push({
             pathname: '/editpost',
             data: collections
@@ -45,7 +54,7 @@ const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost }) =>
         window.scrollTo(0, 0);
         // eslint-disable-next-line
     }, []);
-
+    
     return (
         <div className="details-container">
             <div className="details-page">
@@ -61,6 +70,19 @@ const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost }) =>
                 <h3 className="source">{Source}</h3>
                 <img alt="display" src={Image} className="image"/>
                 <p className="para">{Details}</p>
+            </div>
+            <div className="post--written__section">
+                <div className="post--written">
+                    <div>
+                        {collections.ownerId ? <img alt="pic" src={user.data.profilePic} style={{ width: "140px", height:"140px", borderRadius: "50%", marginTop: "1.4rem", border: "5px solid #c4c0c0"}} /> : <img alt="pic" src="../../assets/profile.png" style={{ width: "140px", height:"140px", borderRadius: "50%", marginTop: "1.4rem", border: "1px solid #c4c4c0"}} />}
+                    </div>
+                    <div>
+                        <h5>WRITTEN BY -</h5>
+                        <h3 className="author">{collections.ownerId ? user.data.name : <p>Unknown Author</p>}</h3>
+                        <h5 className="about-user">{collections.ownerId ? user.data.about : <p>Unknown</p>}</h5>
+                        <h5 className="tweet">{collections.ownerId ? <p>Follow on Twitter: <Link to="#">{user.data.twitter}</Link></p> : <p>Unknown</p>}</h5>
+                    </div>
+                </div>
             </div>
             <h2 className="sponsored">Other Related Articles :-</h2>
             <div className="sponsored--section">
