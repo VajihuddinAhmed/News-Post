@@ -5,6 +5,7 @@ import collectionReducer from './collection/collection.reducer';
 import categoryReducer from './category/category.reducer';
 import deletPostReducer from './deletePost/deletePost.reducer';
 import userPostsReducer from './userPosts/userPosts.reducer';
+import allUsersReducer from './allUsers/allUsers.reducer';
 
 const rootReducer = combineReducers({
     user: userReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     collection: collectionReducer,
     category: categoryReducer,
     post: deletPostReducer,
-    userposts: userPostsReducer
+    userposts: userPostsReducer,
+    allUsers: allUsersReducer
 });
 
 export default rootReducer;
