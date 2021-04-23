@@ -7,8 +7,9 @@ import { fetchNewsPost } from '../../redux/category/category.action';
 import { withRouter } from "react-router-dom";
 import OptionModal from '../../components/optionModal/optionModal';
 import { Link } from 'react-router-dom';
+import { fetchAllUsers } from '../../redux/allUsers/allUsers.action';
 
-const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost }) => {
+const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost, roman, fetchAllUsers }) => {
     const collections = JSON.parse(localStorage.getItem('myItems'))
     const { Image, Source, Title, Details, ownerId } = collections
     const currentUser = user ? ownerId === user.data.ownerId : null
@@ -51,10 +52,11 @@ const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost }) =>
 
     useEffect(() => {
         fetchNewsPost();
+        fetchAllUsers()
         window.scrollTo(0, 0);
         // eslint-disable-next-line
     }, []);
-    
+    const postWriter = roman.allUsers.find((item) => item.ownerId === collections.ownerId)
     return (
         <div className="details-container">
             <div className="details-page">
@@ -74,13 +76,23 @@ const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost }) =>
             <div className="post--written__section">
                 <div className="post--written">
                     <div>
-                        {collections.ownerId ? <img alt="pic" src={user.data.profilePic} style={{ width: "140px", height:"140px", borderRadius: "50%", marginTop: "1.4rem", border: "5px solid #c4c0c0"}} /> : <img alt="pic" src="../../assets/profile.png" style={{ width: "140px", height:"140px", borderRadius: "50%", marginTop: "1.4rem", border: "1px solid #c4c4c0"}} />}
+                        {
+                            roman.allUsers.find((item) => item.ownerId === collections.ownerId) ? 
+                            <img alt="pic" src={postWriter.profilePic} style={{ width: "140px", height:"140px", borderRadius: "50%", marginTop: "1.4rem", border: "5px solid #c4c0c0"}} /> 
+                            : null
+                        }
                     </div>
                     <div>
                         <h5>WRITTEN BY -</h5>
-                        <h3 className="author">{collections.ownerId ? user.data.name : <p>Unknown Author</p>}</h3>
-                        <h5 className="about-user">{collections.ownerId ? user.data.about : <p>Unknown</p>}</h5>
-                        <h5 className="tweet">{collections.ownerId ? <p>Follow on Twitter: <Link to="#">{user.data.twitter}</Link></p> : <p>Unknown</p>}</h5>
+                        <h3 className="author">{roman.allUsers.find((item) => item.ownerId === collections.ownerId) ? 
+                            postWriter.name 
+                            : null}</h3>
+                        <h5 className="about-user">{roman.allUsers.find((item) => item.ownerId === collections.ownerId) ? 
+                            postWriter.about
+                            : null}</h5>
+                        <h5 className="tweet">{roman.allUsers.find((item) => item.ownerId === collections.ownerId) ? 
+                            <p>Follow on Twitter: <Link to="#">{postWriter.twitter}</Link></p>
+                            : null}</h5>
                     </div>
                 </div>
             </div>
@@ -108,12 +120,14 @@ const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost }) =>
 
 const mapStateToProps = state => ({
     newsPost: state.category,
+    roman: state.allUsers,
     user: selectCurrentUser(state)
 })
 
 const mapDispatchToProps = (dispatch) => ({
     fetchDelete: () => dispatch(fetchDelete()),
-    fetchNewsPost: () => dispatch(fetchNewsPost())
+    fetchNewsPost: () => dispatch(fetchNewsPost()),
+    fetchAllUsers: () => dispatch(fetchAllUsers())
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(DetailsPage));
