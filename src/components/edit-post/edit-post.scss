@@ -1,4 +1,4 @@
-.writepost-container {
+.editpost-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -9,10 +9,6 @@
         flex-direction: column;
         justify-content: center;
         margin-bottom: 3rem;
-
-        @media screen and (max-width: 640px) {
-            width: 95%;
-        }
 
         .heading {
             text-align: center;
@@ -67,20 +63,16 @@
                 margin: 20px 0;
             }
 
-            .imageSection {
-                padding: 1.5rem 0;
-                
-                .imagett {
-                    width: 50%;
-                }
-            }
-
             .text-area {
                 border: 1px solid black;
+            }
 
-                @media screen and (max-width: 640px) {
-                    width: 95%;
-                    height: 30%;
+            .imageSection {
+                padding: 1.5rem 0;
+
+                .imagett {
+                    border: 1px solid;
+                    width: 50%;
                 }
             }
 

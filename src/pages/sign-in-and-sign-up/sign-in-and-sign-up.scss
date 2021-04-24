@@ -1,16 +1,17 @@
 .sign-in-and-sign-up {
-    display: flex;
-    justify-content: space-between;
-    width: 1000px;
-    margin: 100px auto;
-    background-color: #edf0f7;
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 100px auto;
+  background-color: #fff;
+  height: 100%;
 
-    @media screen and (max-width: 800px) {
-      flex-direction: column;
-      width: unset;
-      align-items: center;
-      > *:first-child {
-        margin-bottom: 50px;
-      }
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width: unset;
+    align-items: center;
+    > *:first-child {
+      margin-bottom: 50px;
     }
+  }
 }

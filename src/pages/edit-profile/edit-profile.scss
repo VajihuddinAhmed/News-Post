@@ -10,6 +10,10 @@
         flex-direction: column;
         justify-content: center;
 
+        @media screen and (max-width: 640px) {
+            width: 75%;
+        }
+
         .heading {
             text-align: center;
             color: white;
@@ -23,14 +27,43 @@
             background: #fff;
             margin-bottom: 2rem;
             border-radius: 25px;
+            // background-image: url('https://github.com/OlgaKoplik/CodePen/blob/master/leaf2.png?raw=true'), url('https://github.com/OlgaKoplik/CodePen/blob/master/leaf.png?raw=true');
+            // background-repeat: no-repeat, no-repeat;
+            // background-position: 120% -5%, 200% -40%;
+            // background-size: 50%, 90%;
+
+            input[type='file'] {
+                color: transparent;
+              }
+              
 
             .profile-container {
                 display: flex;
                 justify-content: center;
-                margin: 3rem 0;
+                align-items: center;
+                flex-direction: column;
+                margin: 3rem 0 1rem 0;
 
-                .profile {
+                .pic {
                     border-radius: 9rem;
+                    border: 1px solid;
+
+                }
+
+                .files {
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    bottom: 50px;
+
+                    .edit-button {
+                        padding: 5px 25px;
+                        font-size: 16px;
+                        border: none;
+                        color: rgb(255, 255, 255);
+                        background-color: rgba(0, 0, 0, 0.438);
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -51,7 +84,7 @@
                     .input {
                         background: none;
                         background-color: white;
-                        color: grey;
+                        color: black;
                         font-size: 18px;
                         padding: 10px 10px 10px 5px;
                         width: 60%;
