@@ -1,27 +1,52 @@
 .preview-container {
     display: flex;
-    justify-content: space-around;
-    border-bottom: 0.5px solid lightgray;
-    padding-bottom: 3.5rem;
-    background-image: url('../../assets/bg2.jpeg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top right;
-    background-color: #fff;
+    flex-direction: column;
+    background: none;
+    padding: 2rem;
+
+    @media screen and (min-width: 640px) {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 0.5px solid lightgray;
+        padding-bottom: 3.5rem;
+        background-image: url('../../assets/bg2.jpeg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right top;
+        background-color: #fff;
+    }
 
     .section-preview {
+        
+        @media screen and (min-width: 640px) {
+            margin-left: 2rem;
+        }
+
         .title {
-            font-size: 70px;
-            line-height: 74px;
+            font-size: 50px;
             letter-spacing: -0.05em;
             font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
             font-weight: 400;
+            margin: 10px 0;
+
+            @media screen and (min-width: 640px) {
+                font-size: 70px;
+                line-height: 74px;
+            }
         }
         .para {
-            font-size: 18px;
+            font-size: 15px;
             line-height: 24px;
             font-family: 'Lato', sans-serif;
             font-weight: lighter;
+
+            @media screen and (min-width: 640px) {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (min-width: 640px) {
+            margin-left: 8rem;
         }
     }
 }

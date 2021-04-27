@@ -12,7 +12,7 @@ const WriteSection = ({ user }) => {
     return (
         <div className="write-container">
             <div className="section-image">
-                <img alt="books" src={write} style={{width: '500px', height: '420px'}} />
+                <img alt="books" src={write} className="write-image" />
             </div>
             <div className="section-preview">
                 <h1 className="title">Write Posts</h1>

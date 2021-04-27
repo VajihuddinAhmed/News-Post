@@ -13,7 +13,7 @@ const ReadSection = () => (
             </a>
         </div>
         <div className="section-image">
-            <img alt="books" src={read} style={{width: '500px', height: '420px'}} />
+            <img alt="books" src={read} className="read-image" />
         </div>
     </div>
 );

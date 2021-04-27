@@ -1,10 +1,14 @@
 .categories {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 1rem;
-    border-bottom: 0.5px solid lightgray;
+    padding: 2rem;
     background-color: #F8F8F8;
+    border-bottom: 0.5px solid lightgray;
+
+    @media screen and (min-width: 640px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
 
     .title {
         display: grid;
@@ -13,28 +17,54 @@
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 0.5rem;
-        column-gap: 5rem;
-        width: 50%;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 100%;
+
+        @media screen and (min-width: 640px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 0.5rem;
+            column-gap: 5rem;
+            width: 50%;
+        }
 
         .category {
-            width: 12rem;
+            // width: 35rem;
+            background-color: #7BFFF0;
             height: 10rem;
+            width: 100%;
             display: flex;
             justify-content: center;
-            background-color: #7BFFF0;
             align-items: center;
             box-shadow: 1px 1px 5px;
             font-size: 1.3rem;
             font-weight: 700;
 
+            @media screen and (min-width: 640px) {
+                width: 12rem;
+                height: 10rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 1px 1px 5px;
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+
             &:hover {
-                background-color: #1e43ac;
-                cursor: pointer;
-                transform: scale(1.4);
-                transition: transform 0.9s ease-in-out;
-                color: white;
+                background-color: #7BFFF0;
+                color: black;
+                transform: unset;
+                transition: unset;
+
+                @media screen and (min-width: 640px) {
+                    background-color: #1e43ac;
+                    cursor: pointer;
+                    transform: scale(1.4);
+                    transition: transform 0.9s ease-in-out;
+                    color: white;
+                }
             }
         }
     }

@@ -20,13 +20,13 @@ const Footer = () => (
             </div>
             <div className="options">
                 <div className="option">
-                    <h4>GENERAL</h4>
-                    <Link className="links" to="#">Sign Up</Link>
-                    <Link className="links" to="#">About</Link>
+                    <h4 className="option-head">GENERAL</h4>
+                    <Link className="links" to="#">Our Story</Link>
+                    <Link className="links" to="#">Our Community</Link>
                     <Link className="links" to="#">Faq's</Link>
                 </div>
                 <div className="option">
-                    <h4>CONTACT US</h4>
+                    <h4 className="option-head">CONTACT US</h4>
                     <Link className="links" to="#">Paris</Link>
                     <Link className="links" to="#">+33 669 289 661</Link>
                     <Link className="links" to="#">info@newspost.com</Link>
