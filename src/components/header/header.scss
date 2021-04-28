@@ -61,6 +61,8 @@ body {
               color: black;
               font-weight: bolder;
               margin-right: 2rem;
+              width: 100%;
+              
               &:hover {
                 border-bottom: 1px solid #1e43ac;
               }
@@ -81,6 +83,7 @@ body {
 
         .option {
           padding: 8px 0 5px 0;
+          width: 50%;
 
           @media screen and (min-width: 640px) {
             padding: 10px;

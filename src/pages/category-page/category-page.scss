@@ -1,10 +1,10 @@
 .category-page {
-    width: 70%;
-    margin-left: 3rem;
+    width: 95%;
+    margin-left: 1rem;
 
-    @media screen and (max-width: 640px) {
-        width: 95%;
-        margin-left: 1rem;
+    @media screen and (min-width: 640px) {
+        width: 70%;
+        margin-left: 3rem;
     }
 
     .sorting-section {
@@ -14,19 +14,35 @@
         margin-right: 15px;
 
         .filter {
-            width: 500px;
-            height: 39px;
+            width: 200px;
+            height: 33px;
             padding-left: 5px;
             font-size: 14px;
             margin-right: 15px;
+
+            @media screen and (min-width: 640px) {
+                width: 500px;
+                height: 39px;
+                padding-left: 5px;
+                font-size: 14px;
+                margin-right: 15px;
+            }
         }
 
         .sorting {
-            width: 150px;
-            height: 39px;
+            width: 140px;
+            height: 33px;
             padding-left: 10px;
             font-size: 14px;
             font-weight: 550;
+
+            @media screen and (min-width: 640px) {
+                width: 150px;
+                height: 39px;
+                padding-left: 10px;
+                font-size: 14px;
+                font-weight: 550;
+            }
         }
     }
 
@@ -53,15 +69,33 @@
         }
 
         .title {
-            font-size: 1.3rem;
+            font-size: 0.9rem;
             font-weight: bolder;
             width: 90%;
             color: blue;
+
+            @media screen and (min-width: 640px) {
+                font-size: 1.3rem;
+                font-weight: bolder;
+                width: 90%;
+                color: blue;
+            }
         }
 
         .image {
             display: flex;
             justify-content: flex-end;
+
+            .item-image {
+                margin-top: 1rem;
+                width: 150px;
+                height: 100px;
+
+                @media screen and (min-width: 640px) {
+                    width: 300px;
+                    height: 180px;
+                }
+            }
         }
 
         .box {

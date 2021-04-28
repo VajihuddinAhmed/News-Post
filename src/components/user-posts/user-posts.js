@@ -79,7 +79,7 @@ const UserPosts = ({ user, allPosts, fetchPosts, location }) => {
                                             </div>
                                         </div>
                                         <div key={i + 543} className="image">
-                                            <img alt="images" src={item.Image} style={{ width: '300px', height: '180px'}}/>
+                                            <img alt="images" src={item.Image} className="item-image" />
                                         </div>
                                     </div>
                                     <p key={i + 870} className="timestamp">{new Date(item.created).toDateString()}</p>    
