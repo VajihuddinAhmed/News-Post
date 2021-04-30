@@ -16,7 +16,6 @@ body {
     @media screen and (min-width: 640px) {
       height: 70%;
       width: 100%;
-      margin-bottom: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -43,12 +42,11 @@ body {
        .profile-icon {
         display: flex;
         justify-content: space-evenly;
-        margin-left: 1.5rem;
 
           @media screen and (min-width: 640px) {
             display: flex;
             justify-content: center;
-            margin-right: 5rem;
+            margin-left: 1.5rem;
           }
 
           .option {
@@ -60,9 +58,6 @@ body {
               cursor: pointer;
               color: black;
               font-weight: bolder;
-              margin-right: 2rem;
-              width: 100%;
-              
               &:hover {
                 border-bottom: 1px solid #1e43ac;
               }

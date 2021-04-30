@@ -105,7 +105,7 @@ const EditProfile = ({ user }) => {
                         <div className="profile-container">
                             <div className="imagett">
                                 {
-                                    imgData === null ? <img className="pic" alt="images" src={user.data.profilePic} style={{ width: '300px', height: '300px'}}/> : <img alt="images" className="pic" src={imgData} style={{ width: '300px', height: '300px'}}/>
+                                    imgData === null ? <img className="pic" alt="images" src={user.data.profilePic} /> : <img alt="images" className="pic" src={imgData} />
                                 }
                             </div>
                             <div className="files">
@@ -132,7 +132,7 @@ const EditProfile = ({ user }) => {
                             </div>
                             <div className="sections">
                                 <h3 className="sub-title">About Me</h3>
-                                <textarea name="About" value={About} className="textarea" onChange={handleChange} rows="5" cols="40"/>
+                                <textarea name="About" value={About} className="textarea" onChange={handleChange} />
                             </div>
                         </div>
                         <div className="button">

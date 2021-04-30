@@ -5,13 +5,16 @@
     background-color: #48afa7;
 
     .edit-container {
-        width: 40%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        @media screen and (max-width: 640px) {
-            width: 75%;
+        @media screen and (min-width: 640px) {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .heading {
@@ -45,8 +48,17 @@
                 margin: 3rem 0 1rem 0;
 
                 .pic {
-                    border-radius: 9rem;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 5rem;
                     border: 1px solid;
+
+                    @media screen and (min-width: 640px) {
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 9rem;
+                        border: 1px solid;
+                    }
 
                 }
 
@@ -57,12 +69,21 @@
                     bottom: 50px;
 
                     .edit-button {
-                        padding: 5px 25px;
-                        font-size: 16px;
+                        padding: 5px 12px;
+                        font-size: 14px;
                         border: none;
                         color: rgb(255, 255, 255);
                         background-color: rgba(0, 0, 0, 0.438);
                         cursor: pointer;
+
+                        @media screen and (min-width: 640px) {
+                            padding: 5px 25px;
+                            font-size: 16px;
+                            border: none;
+                            color: rgb(255, 255, 255);
+                            background-color: rgba(0, 0, 0, 0.438);
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -80,22 +101,46 @@
                     
                     .sub-title {
                         margin: 0;
+                        font-size: 16px;
+
+                        @media screen and (min-width: 640px) {
+                            font-size: 18.72px;
+                        }
                     }
                     .input {
                         background: none;
                         background-color: white;
                         color: black;
-                        font-size: 18px;
+                        font-size: 14px;
                         padding: 10px 10px 10px 5px;
-                        width: 60%;
+                        width: 80%;
                         border: 0.1px solid black;
                         border-radius: 0;
                         margin: 10px 0;
+
+                        @media screen and (min-width: 640px) {
+                            background: none;
+                            background-color: white;
+                            color: black;
+                            font-size: 18px;
+                            padding: 10px 10px 10px 5px;
+                            width: 60%;
+                            border: 0.1px solid black;
+                            border-radius: 0;
+                            margin: 10px 0;
+                        }
                     }
 
                     .textarea {
+                        width: 233px;
+                        height: 55px;
                         border: 0.1px solid black;
                         margin-top: 1rem;
+
+                        @media screen and (min-width: 640px) {
+                            width: 343px;
+                            height: 75px;
+                        }
                     }
                 }
             }
@@ -106,20 +151,31 @@
                 margin: 3rem 0;
 
                 .btn {
-                    padding: 12px 5rem;
+                    padding: 8px 2rem;
                     background-color: #1e43ac;
                     color: white;
                     font-family: 'Lato', sans-serif;
                     font-weight: bold;
-                    font-size: 16px;
+                    font-size: 14px;
                     border: 0.1px solid #1e43ac;
                     border-radius: 5px;
 
-                    &:hover {
+                    @media screen and (min-width: 640px) {
+                        padding: 12px 5rem;
+                        background-color: #1e43ac;
+                        color: white;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: bold;
+                        font-size: 16px;
                         border: 0.1px solid #1e43ac;
-                        background-color: white;
-                        color: black;
-                        cursor: pointer;
+                        border-radius: 5px;
+
+                        &:hover {
+                            border: 0.1px solid #1e43ac;
+                            background-color: white;
+                            color: black;
+                            cursor: pointer;
+                        }
                     }
                 }
             }

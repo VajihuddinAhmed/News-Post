@@ -46,12 +46,12 @@
                     cursor: pointer;
                     color: white;
                     border-radius: 5px;
-                }
 
-                &:hover {
-                    background-color: white;
-                    color: black;
-                    border: 1px solid black;
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                        border: 1px solid black;
+                    }
                 }
             }
 
@@ -76,12 +76,12 @@
                     letter-spacing: 0.5px;
                     color: white;
                     border-radius: 5px;
-                }
 
-                &:hover {
-                    background-color: white;
-                    color: black;
-                    border: 1px solid black;
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                        border: 1px solid black;
+                    }
                 }
             }
         }
