@@ -137,7 +137,7 @@ const WritePost = ({ user }) => {
                         </div>
                         <div>
                             <h3>Details</h3>
-                            <textarea name="Details" value={Details} className="text-area" onChange={handleChange} rows="35" cols="100"/>
+                            <textarea name="Details" value={Details} className="text-area" onChange={handleChange} />
                         </div>
                         <div className="imageSection">
                             <div>
@@ -146,7 +146,7 @@ const WritePost = ({ user }) => {
                             </div>
                             <div className="imagett">
                                 {
-                                    imgData === null ? undefined : <img alt="images" src={imgData} style={{ width: '100%', height: '300px', border: '1px solid'}}/>
+                                    imgData === null ? undefined : <img alt="images" src={imgData} className="writeImage" />
                                 }
                             </div>
                         </div>

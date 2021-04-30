@@ -4,11 +4,15 @@
     justify-content: center;
 
     .story-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
+        width: 80%;
+
+        @media screen and (min-width: 640px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+        }
 
         .section {
             margin: 3rem 0;
@@ -28,7 +32,20 @@
                 word-break: break-word;
                 font-weight: 400;
                 padding-top: 1rem;
+            }
 
+            .newspostImage {
+                width: 300px;
+                height: 120px;
+                padding: 1rem 0;
+                margin-top: 2rem;
+
+                @media screen and (min-width: 640px) {
+                    width: 400px;
+                    height: 150px;
+                    padding: 1rem 0;
+                    margin-top: 2rem;
+                }
             }
         }
     }

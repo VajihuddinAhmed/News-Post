@@ -18,7 +18,7 @@ const StoryPage = () => {
                     </p>
                     <p className="para">“For me, News Post is the place where the community is the prime reviewer of a <br/> product. They offer critiques and they give out unbiased, and fair critical <br/> reading to a product or service. It’s effectively a balanced and neutral<br/> community to give out recommendations to a specific use case.” — Cappuccino <br/>
                     </p>
-                    <img alt="display" style={{width: '400px', height: '150px', padding: '1rem 0', marginTop: '2rem'}} src={newspost} className="image"/>
+                    <img alt="display" src={newspost} className="newspostImage"/>
                     <p className="para">News Post is a product recommendation community that helps connect people <br/> with the best products for them. You shouldn’t have to waste time and <br/> money to find solutions to your problems. By collecting the knowledge of <br/> enthusiasts across the world through recommendations, we can quickly and <br/> confidently show people the truth about a product. <br/>
                     </p>
                     <p className="para">News Post was built on, and is being built on, three core philosophies. The first of <br/> which is that there should be no market for lemons. You should be able to <br/> make the same decisions an expert would for any purchase, and News Post<br/> allows for that. <br/>

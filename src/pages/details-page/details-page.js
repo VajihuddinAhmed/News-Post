@@ -103,7 +103,7 @@ const DetailsPage = ({ user, fetchDelete, history, fetchNewsPost, newsPost, roma
                         <Link key={i + 628} to={{pathname: "/details", collections: item }}>
                         <div onClick={() => onPostClick(item)}>
                             <div>
-                                <img alt="images" src={item.Image} style={{ width: '200px', height: '120px'}}/>
+                                <img alt="images" src={item.Image} style={{ width: '200px', height: '120px' }}/>
                             </div>
                             <div className="title">
                                 <p>{item.Title}</p>

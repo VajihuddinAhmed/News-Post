@@ -5,8 +5,8 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Lato', sans-serif;
         background-color: #ffffff;
 
-        @media screen and (max-width: 800px) {
-            padding: 10px;
+        @media screen and (max-width: 640px) {
+            padding: 0;
         }
     }
 

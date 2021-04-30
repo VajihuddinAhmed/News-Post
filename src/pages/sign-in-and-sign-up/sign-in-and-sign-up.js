@@ -5,6 +5,7 @@ import SignUp from '../../components/sign-up/sign-up';
 
 const SignInAndSignUpPage = () => (
     <div className="sign-in-and-sign-up">
+        {window.scrollTo(0, 0)}
         <SignIn />
         <SignUp />
     </div>

@@ -151,7 +151,7 @@ const EditPost = ({ user }) => {
                         </div>
                         <div>
                             <h3>Details</h3>
-                            <textarea name="Details" value={Details} className="text-area" onChange={handleChange} rows="35" cols="100"/>
+                            <textarea name="Details" value={Details} className="text-area" onChange={handleChange} />
                         </div>
                         <div className="imageSection">
                             <div>
@@ -160,7 +160,7 @@ const EditPost = ({ user }) => {
                             </div>
                             <div className="imagett">
                                 {
-                                    imgData === null ? <img alt="images" src={tt4} style={{ width: '100%', height: '300px'}}/> : <img alt="images" src={imgData} style={{ width: '100%', height: '300px'}}/>
+                                    imgData === null ? <img alt="images" src={tt4} className="writeImage" /> : <img alt="images" src={imgData} className="writeImage" />
                                 }
                             </div>
                         </div>

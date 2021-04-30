@@ -38,9 +38,9 @@ const EditProfile = ({ user }) => {
         });
         res.json()
           .then(res => {
-            console.log(res);
+            if(res === 200) return
             alertify.set('notifier','position', 'top-center');
-            alertify.notify('Profile Edited Successfully', 'success', 3, function(){  console.log('dismissed'); });
+            alertify.notify('Profile Edited Successfully', 'success', 3, function(){ 'dismissed' });
           })
           .catch(err => console.log(err));
       }
@@ -70,6 +70,8 @@ const EditProfile = ({ user }) => {
               setImgData(reader.result);
             });
             reader.readAsDataURL(e.target.files[0]);
+        } else {
+            setPicture(picture)
         }
         setSelectedFile(e.target.files[0])
     }
