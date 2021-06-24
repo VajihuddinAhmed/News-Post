@@ -23,9 +23,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 ### `about`
-This is an E-Commerce application which shows list of items for news,
+This is a blogging website which shows list of news from different trending topics,
 
-This Application is made by using Redux where front-end is built in ReactJS and Back-end is built in BackendlessAPI for Database. In this application the user can view for the news from the posts.
+This Application front-end is made by using ReactJS, Redux and Back-end is built in BackendlessAPI. In this application the user can view the articles related different topics.
 
 To Run this Project, Just Download this project Install all the dependencies by npm install then npm start to run this project Run Both Frontend and Backend in seperate console(install Both Dependencies seperately) First run Backend then run Front end. After installing all dependencies. Then Create Database and Tables as mentioned in database.txt
 
