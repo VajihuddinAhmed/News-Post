@@ -15,7 +15,7 @@ const DetailsPage = lazy(() => import('./pages/details-page/details-page'))
 const PostsPage = lazy(() => import('./pages/posts-page/posts-page'))
 const EditProfile = lazy(() => import('./pages/edit-profile/edit-profile'))
 const StoryPage = lazy(() => import('./pages/story-page/story-page'))
-
+const testPage = lazy(() => import('./pages/testing/testing'))
 
 const App = () => {
   
@@ -35,6 +35,7 @@ const App = () => {
             <Route exact path="/posts" component={PostsPage} />
             <Route exact path="/editprofile" component={EditProfile} />
             <Route exact path="/story" component={StoryPage} />
+            <Route exact path="/test" component={testPage} />
           </Suspense>
         </ErrorBoundary>
       </Switch>

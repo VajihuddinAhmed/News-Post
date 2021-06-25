@@ -3,6 +3,7 @@ import './edit-profile.scss';
 import { connect } from 'react-redux';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
+import defaultPic from '../../assets/profile.png';
 import alertify from 'alertifyjs';
 import 'alertifyjs/build/css/alertify.css';
 
@@ -107,7 +108,7 @@ const EditProfile = ({ user }) => {
                         <div className="profile-container">
                             <div className="imagett">
                                 {
-                                    imgData === null ? <img className="pic" alt="images" src={user.data.profilePic} /> : <img alt="images" className="pic" src={imgData} />
+                                    imgData === null ? <img alt="images" className="pic" src={defaultPic} /> : <img className="pic" alt="images" src={user.data.profilePic} /> 
                                 }
                             </div>
                             <div className="files">
